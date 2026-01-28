@@ -1,0 +1,8 @@
+flask
+pymongo
+python-dotenv
+flask-jwt-extended
+werkzeug
+gunicorn
+openai-agents
+flask-cors
