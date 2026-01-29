@@ -1,5 +1,5 @@
 import json
-from ai.agent import Agent
+from app.ai.agent import Agent
 
 # Instantiate agent once (singleton-style)
 feedback_agent = Agent(

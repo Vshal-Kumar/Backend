@@ -24,13 +24,13 @@ def create_app():
             ]
         }
     },
-    supports_credentials=True,  # 🔴 REQUIRED
+    supports_credentials=True, 
     allow_headers=["Authorization", "Content-Type"],
     methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"]
 )
     from app.auth import auth_bp
     from app.users import users_bp
-
+    
     app.register_blueprint(auth_bp, url_prefix="/auth")
     app.register_blueprint(users_bp, url_prefix="/users")
     
@@ -40,8 +40,8 @@ def create_app():
     from app.internships import internships_bp
     app.register_blueprint(internships_bp, url_prefix="/internships")
     
-    #from app.submissions import submissions_bp
-    #app.register_blueprint(submissions_bp, url_prefix="/submissions")
+    from app.submissions import submissions_bp
+    app.register_blueprint(submissions_bp, url_prefix="/submissions")
 
 
 
